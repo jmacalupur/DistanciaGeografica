@@ -1,4 +1,5 @@
-Attribute VB_Name = "Módulo1"
+Attribute VB_Name = "Módulo11"
+'Funcion que te permite calcular la distancia entre dos coordenadas geográficas utilizando la fórmula de Haversine
 Function DistanciaGeografica(LatitudTienda, LongitudTienda, LatitudDestino, LongitudDestino, RadioTierra As Double) As Double
 Dim distancia As Double
 Dim DiferenciaLatitud As Double
