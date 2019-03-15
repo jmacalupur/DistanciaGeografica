@@ -1,6 +1,6 @@
 Attribute VB_Name = "Módulo11"
 'Funcion que te permite calcular la distancia entre dos coordenadas geográficas utilizando la fórmula de Haversine
-Function DistanciaGeografica(LatitudTienda, LongitudTienda, LatitudDestino, LongitudDestino, RadioTierra As Double) As Double
+Function DistanciaGeografica(LatitudInicio, LongitudInicio, LatitudFin, LongitudFin, RadioTierra As Double) As Double
 Dim distancia As Double
 Dim DiferenciaLatitud As Double
 Dim DiferenciaLongitud As Double
@@ -9,10 +9,10 @@ Dim b As Double
 
 
 constante = WorksheetFunction.Pi / 180
-DiferenciaLatitud = LatitudTienda - LatitudDestino
-DiferenciaLongitud = LongitudTienda - LongitudDestino
+DiferenciaLatitud = LatitudInicio - LatitudFin
+DiferenciaLongitud = LongitudInicio - LongitudFin
 
-a = Sin(DiferenciaLatitud * constante / 2) ^ 2 + Cos(LatitudTienda * constante) * Cos(LatitudDestino * constante) * Sin(DiferenciaLongitud * constante / 2) ^ 2
+a = Sin(DiferenciaLatitud * constante / 2) ^ 2 + Cos(LatitudInicio * constante) * Cos(LatitudFin * constante) * Sin(DiferenciaLongitud * constante / 2) ^ 2
 
 a = 2 * WorksheetFunction.Asin(Sqr(a))
 
